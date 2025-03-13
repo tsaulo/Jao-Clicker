@@ -1,20 +1,21 @@
-
+#pqp{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 
 #imagem {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0rem;
+    margin-left: 0rem;
     width: 20rem;
     height: 20rem;
-    display: block;
-    z-index: 999;
     cursor: pointer;
     animation-name: spin;
     animation-duration: 30000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     transform-origin: center;
-    transition: width 0.3s ease, height 0.3s ease, margin-top 0.3s ease; /* Transição suave */
+    transition: width 0.3s ease, height 0.3s ease, margin-top 0.3s ease, margin-left 0.3s ease, margin-bottom 0.3s ease;  /* Transição suave */
 }
 
 @keyframes spin {
@@ -30,11 +31,12 @@
     width: 21rem;
     height: 21rem;
     margin-top: -0.5rem;
+    margin-bottom: -0.5rem ;
 }
 
 #imagem:active {
-    width: 19rem;
-    height: 19rem;
-    margin-top: 0.5rem;
-
+    width: 19.5rem;
+    height: 19.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem ;
 }
