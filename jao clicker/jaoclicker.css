@@ -1,3 +1,22 @@
+#header{
+    width: 100%; 
+    height: 3rem;
+}
+
+#loboloja button{
+    display: block;
+    margin-bottom: 1rem;
+}
+
+#esquerda{
+    position: absolute; 
+    float: left;
+}
+
+#main{
+    text-align: center;
+}
+
 #pqp{
     display: flex;
     justify-content: center;
