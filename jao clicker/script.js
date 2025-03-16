@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('sps').innerHTML = sps;
     
     // Aumenta os streams automaticamente com base no SPS a cada 1 segundo
-    setInterval(aumentarStreamsPorSegundo, 1000); // A cada 1 segundo
+    setInterval(aumentarStreamsPorSegundo, 1000);
+    setInterval(updateLoja, 1000);
 });
 
 // LOJA
@@ -93,17 +94,21 @@ const s = "fotocas/super sem fundo.png";
 
 function lobos() {
     document.getElementById("imagem").src = l;
+    document.getElementById("pqp").style.backgroundImage="url(fotocas/LOBOS.png)";
 
 }
 
 function antiheroi() {
     document.getElementById("imagem").src = ah;
+    document.getElementById("pqp").style.backgroundImage="url(fotocas/ANTIHEROI.png)";
 }
 
 function pirata() {
     document.getElementById("imagem").src = p;
+    document.getElementById("pqp").style.backgroundImage="url(fotocas/PIRATA.png)";
 }
 
 function superr() {
     document.getElementById("imagem").src = s;
+    document.getElementById("pqp").style.backgroundImage="url(fotocas/SUPER.png)";
 }
