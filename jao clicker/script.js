@@ -1,7 +1,7 @@
 var streams = 0;
 var numero = 1;
 var modificadorC = 1;
-var sps = 0; // Streams por segundo
+var sps = 0; 
 var modificadorS = 1;
 
 document.addEventListener("DOMContentLoaded", () => {
