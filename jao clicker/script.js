@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
 const loboloja = document.getElementById('loboloja');
 
 let loja = [
-    { id: 1, nome: 'Vinho Barato', inicio: 13, preco: 13, quantidade: 0, sps: 0.1 },
-    { id: 2, nome: 'Lobo', inicio: 311, preco: 311, quantidade: 0, sps: 1 },  // 1 SPS por item
-    { id: 3, nome: 'Cruz', inicio: 2013, preco: 2013, quantidade: 0, sps: 5 },  // 5 SPS por item
+    { id: 1, nome: 'Vinho Barato', inicio: 13, preco: 13, quantidade: 0, sps: 1 },
+    { id: 2, nome: 'Lobo', inicio: 311, preco: 178, quantidade: 0, sps: 5 },  
+    { id: 3, nome: 'Cruz', inicio: 2013, preco: 2013, quantidade: 0, sps: 10 },  
 ];
 
 // Atualiza a interface
@@ -93,6 +93,7 @@ const s = "fotocas/super sem fundo.png";
 
 function lobos() {
     document.getElementById("imagem").src = l;
+
 }
 
 function antiheroi() {
