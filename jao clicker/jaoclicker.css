@@ -1,7 +1,7 @@
 .asAbas{
     display: flex;
     flex-wrap: wrap;
-    max-width: 62%;
+    max-width: 40%;
 }
 
 .asAbas input[type="radio"]{
@@ -13,6 +13,7 @@
     background: rgb(207, 207, 207);
     font-weight: bold;
     color: black;
+    cursor: pointer;
 }
 
 .asAbas .aba{
@@ -26,6 +27,7 @@
 .asAbas .aba button{
     width: 60%;
     text-align: left;
+    cursor: pointer;
 }
 
 .asAbas input[type='radio']:checked + label + .aba {
