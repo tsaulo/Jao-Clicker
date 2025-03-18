@@ -1,3 +1,41 @@
+.asAbas{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 62%;
+}
+
+.asAbas input[type="radio"]{
+    display: none;
+}
+
+.asAbas label{
+    padding: 5%;
+    background: rgb(207, 207, 207);
+    font-weight: bold;
+    color: black;
+}
+
+.asAbas .aba{
+    width: 100%;
+    background: white;
+    padding: 5%;
+    order: 1;
+    display: none;
+}
+
+.asAbas .aba button{
+    width: 60%;
+    text-align: left;
+}
+
+.asAbas input[type='radio']:checked + label + .aba {
+    display: block;
+}
+
+.asAbas input[type='radio']:checked + label {
+    background: white;
+}
+
 html{
     height: 100%;
 }
@@ -7,12 +45,14 @@ body{
     height: 100%;
     background-color: black;
     color: aliceblue;
+    font-family: Georgia;
 }
 
 button{
     height: 4rem;
     width: fit-content;
     font-size: large;
+    font-family: Georgia;
 }
 
 #auxiliar{

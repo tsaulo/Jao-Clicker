@@ -131,7 +131,9 @@ function updateLoja() {
     loja.forEach(item => {
         const botao = document.createElement('button');
         botao.className = 'itemDaLoja';
-        botao.textContent = `${item.nome} - ${item.preco} streams (Qtd: ${item.quantidade})`;
+        botao.innerHTML = `
+        <div style="font-size: x-large; font-weight: bold; text-align: right; margin-top:-14%; margin-right: -3%;">${item.quantidade}</div>
+        <div style="font-size: medium; font-weight: normal; text-align: left; padding-top: 1%">${item.nome} - ${item.preco} streams</div>`;
 
         // Habilita o botão se tiver streams suficientes
         botao.disabled = streams < item.preco;
