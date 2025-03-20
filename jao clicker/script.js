@@ -18,9 +18,22 @@ document.addEventListener("DOMContentLoaded", () => {
 const loboloja = document.getElementById('loboloja');
 
 let loja = [
-    { id: 1, nome: 'Vinho Barato', inicio: 13, preco: 13, quantidade: 0, sps: 1, mult: 1 },
-    { id: 2, nome: 'Lobo', inicio: 311, preco: 178, quantidade: 0, sps: 5, mult: 1 },  
-    { id: 3, nome: 'Cruz', inicio: 2013, preco: 2013, quantidade: 0, sps: 10, mult: 1 },  
+    { id: 1, nome: 'Álcool', inicio: 17, preco: 17, quantidade: 0, sps: 1, mult: 1 },
+    { id: 2, nome: '..........', inicio: 178, preco: 178, quantidade: 0, sps: 5, mult: 1 },  
+    { id: 3, nome: 'Cruz', inicio: 1313, preco: 1313, quantidade: 0, sps: 10, mult: 1 }, 
+    { id: 4, nome: 'Monstros', inicio: 4619, preco: 4619, quantidade: 0, sps: 50, mult: 1 },
+    { id: 5, nome: 'Arqueiro', inicio: 9102, preco: 9102, quantidade: 0, sps: 100, mult: 1 },  
+    { id: 6, nome: '............', inicio: 21119, preco: 21119, quantidade: 0, sps: 500, mult: 1 },  
+    { id: 7, nome: 'Hotel', inicio: 77777, preco: 77777, quantidade: 0, sps: 1000, mult: 1 },
+    { id: 8, nome: 'Prédio', inicio: 101019, preco: 101019, quantidade: 0, sps: 5000, mult: 1 },  
+    { id: 9, nome: 'Navio', inicio: 500000, preco: 500000, quantidade: 0, sps: 10000, mult: 1 },
+    { id: 10, nome: 'Doce', inicio: 1000000, preco: 1000000, quantidade: 0, sps: 50000, mult: 1 },  
+    { id: 11, nome: '...............', inicio: 5000000, preco: 5000000, quantidade: 0, sps: 100000, mult: 1 }, 
+    { id: 12, nome: '...................', inicio: 10000000, preco: 10000000, quantidade: 0, sps: 500000, mult: 1 },
+    { id: 13, nome: 'Gameboy', inicio: 50000000, preco: 50000000, quantidade: 0, sps: 1000000, mult: 1 },  
+    { id: 14, nome: 'Rádio', inicio: 100000000, preco: 100000000, quantidade: 0, sps: 5000000, mult: 1 },  
+    { id: 15, nome: 'Locadora', inicio: 500000000, preco: 500000000, quantidade: 0, sps: 10000000, mult: 1 },
+    { id: 16, nome: '..........', inicio: 1000000000, preco: 1000000000, quantidade: 0, sps: 50000000, mult: 1 },  
 ];
 
 // APRIMORAMENTOS
@@ -28,11 +41,11 @@ let loja = [
 const loboaprimoramento = document.getElementById('loboaprimoramento');
 
 let aprimoramentos = [
-    { id: 1, nome: 'App de Streaming', desc: 'Aumenta o poder do clique em 50%',
-    quote: 'Taca stream na lenda!', preco: 25, tipo: "clique", mod: 1.5 },
+    { id: 1, nome: 'Cigarro', desc: 'Aumenta o poder do clique em 50%',
+    quote: 'Você me ensina a fumar?', preco: 25, tipo: "clique", mod: 1.5 },
 
-    { id: 2, nome: 'Cigarro', desc: 'Aumenta a produção do Vinho Barato em 50%',
-    quote: 'Você me ensina a fumar?', preco: 50, tipo: "mItem", mod: 1.5, IDItem: 1 },
+    { id: 2, nome: 'Ressaca', desc: 'Aumenta a produção do Álcool em 50%',
+    quote: 'E de bar em bar, terminei no mar.', preco: 50, tipo: "mItem", mod: 1.5, IDItem: 1 },
 
     { id: 3, nome: 'Própria Caminhada', desc: 'Aumenta a produção do Lobo em 50%',
     quote: 'Nada do que você diz faz sentido algum...', preco: 100, tipo: "mItem", mod: 1.5, IDItem: 2 },
@@ -131,9 +144,15 @@ function updateLoja() {
     loja.forEach(item => {
         const botao = document.createElement('button');
         botao.className = 'itemDaLoja';
-        botao.innerHTML = `
+        botao.innerHTML = 
+        `
         <div style="font-size: x-large; font-weight: bold; text-align: right; margin-top:-5%; margin-right: -3%;">${item.quantidade}</div>
         <div style="font-size: medium; font-weight: normal; text-align: left; padding-top: 0%">${item.nome}<br/>${item.preco} streams</div>`;
+
+        if(item.id != 1 && streams < item.inicio/3 ){
+            botao.style.visibility = "hidden";
+        }
+        
 
         // Habilita o botão se tiver streams suficientes
         botao.disabled = streams < item.preco;
