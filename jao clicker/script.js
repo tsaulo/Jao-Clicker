@@ -145,11 +145,10 @@ function updateLoja() {
         const botao = document.createElement('button');
         botao.className = 'itemDaLoja';
         botao.innerHTML = 
-        `
-        <div style="font-size: x-large; font-weight: bold; text-align: right; margin-top:-5%; margin-right: -3%;">${item.quantidade}</div>
-        <div style="font-size: medium; font-weight: normal; text-align: left; padding-top: 0%">${item.nome}<br/>${item.preco} streams</div>`;
+        `<div style= "width: max-content; font-size: 2.2rem; font-weight: 600; float: left; padding-right: 2%; padding-left: 1%;">${item.quantidade}</div> 
+        ${item.nome}<br/>${item.preco} streams`;
 
-        if(item.id != 1 && streams < item.inicio/3 ){
+        if(item.id != 1 && streams < item.inicio/3 && item.quantidade == 0){
             botao.style.visibility = "hidden";
         }
         
@@ -178,21 +177,21 @@ const s = "fotocas/super sem fundo.png";
 
 function lobos() {
     document.getElementById("imagem").src = l;
-    document.getElementById("pqp").style.backgroundImage="url(fotocas/LOBOS.png)";
+    document.getElementById("meio").style.backgroundImage="url(fotocas/LOBOS.png)";
 
 }
 
 function antiheroi() {
     document.getElementById("imagem").src = ah;
-    document.getElementById("pqp").style.backgroundImage="url(fotocas/ANTIHEROI.png)";
+    document.getElementById("meio").style.backgroundImage="url(fotocas/ANTIHEROI.png)";
 }
 
 function pirata() {
     document.getElementById("imagem").src = p;
-    document.getElementById("pqp").style.backgroundImage="url(fotocas/PIRATA.png)";
+    document.getElementById("meio").style.backgroundImage="url(fotocas/PIRATA.png)";
 }
 
 function superr() {
     document.getElementById("imagem").src = s;
-    document.getElementById("pqp").style.backgroundImage="url(fotocas/SUPER.png)";
+    document.getElementById("meio").style.backgroundImage="url(fotocas/SUPER.png)";
 }
