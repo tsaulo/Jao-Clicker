@@ -21,7 +21,7 @@ let loja = [
     { id: 1, nome: 'Álcool', inicio: 17, preco: 17, quantidade: 0, sps: 1, mult: 1 },
     { id: 2, nome: '..........', inicio: 178, preco: 178, quantidade: 0, sps: 5, mult: 1 },  
     { id: 3, nome: 'Cruz', inicio: 1313, preco: 1313, quantidade: 0, sps: 10, mult: 1 }, 
-    { id: 4, nome: 'Monstros', inicio: 4619, preco: 4619, quantidade: 0, sps: 50, mult: 1 },
+    { id: 4, nome: 'Monstro', inicio: 4619, preco: 4619, quantidade: 0, sps: 50, mult: 1 },
     { id: 5, nome: 'Arqueiro', inicio: 9102, preco: 9102, quantidade: 0, sps: 100, mult: 1 },  
     { id: 6, nome: '............', inicio: 21119, preco: 21119, quantidade: 0, sps: 500, mult: 1 },  
     { id: 7, nome: 'Hotel', inicio: 77777, preco: 77777, quantidade: 0, sps: 1000, mult: 1 },
@@ -129,6 +129,32 @@ function updateAprimoramentos(){
         botAp.style.cursor = "pointer";
         botAp.textContent = `${apri.nome} - ${apri.preco} streams`;
         botAp.disabled = streams < apri.preco;
+
+        const detalhesApri = document.createElement('div');
+        detalhesApri.className = 'detalhes-aprimoramento';
+        detalhesApri.style.position = 'absolute';
+        detalhesApri.style.backgroundColor = 'white';
+        detalhesApri.style.cursor = 'auto';
+        detalhesApri.style.border = '1px solid black';
+        detalhesApri.style.padding = '10px';
+        detalhesApri.style.display = 'none'; // Inicialmente oculta
+        detalhesApri.innerHTML = `
+            <strong>${apri.nome}</strong><br>
+            ${apri.desc}<br>
+            <div style="text-align: right; font-size: small;">"${apri.quote}"</div>
+        `;
+
+        // Adiciona a div de detalhes ao botão
+        botAp.appendChild(detalhesApri);
+
+        // Adiciona os eventos de mouse para exibir/ocultar a div
+        botAp.addEventListener('mouseover', () => {
+            detalhesApri.style.display = 'block';
+        });
+
+        botAp.addEventListener('mouseout', () => {
+            detalhesApri.style.display = 'none';
+        });
 
         botAp.addEventListener('click', () => aprimorar(apri.id));
 

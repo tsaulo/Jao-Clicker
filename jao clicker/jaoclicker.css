@@ -38,6 +38,50 @@
     background: white;
 }
 
+.diAbas{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.diAbas input[type="radio"]{
+    display: none;
+}
+
+.diAbas label{
+    padding: 5%;
+    background: rgb(207, 207, 207);
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.diAbas .daba{
+    width: 100%;
+    background: white;
+    padding: 5%;
+    order: 1;
+    display: none;
+}
+
+.diAbas .daba button{
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.diAbas input[type='radio']:checked + label + .daba {
+    display: block;
+}
+
+.diAbas input[type='radio']:checked + label {
+    background: white;
+}
+
+.diAbas .daba h3{
+    color: black;
+}
+
 html{
     height: 100%;
 }
@@ -98,7 +142,11 @@ button{
 #texto{
     text-align: center;
     position: absolute;
-    top: 15%;
+    top: 3rem;
+}
+
+#texto h1{
+    margin: -2%;
 }
 
 
