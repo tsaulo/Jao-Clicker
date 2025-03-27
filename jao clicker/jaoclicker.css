@@ -101,16 +101,25 @@ button{
     font-family: Georgia;
 }
 
-
-
 #loboloja button{
     display: block;
     margin-bottom: 1rem;
 }
 
+#loboaprimoramento{
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    
+}
+
 #loboaprimoramento button{
-    display: block;
-    margin-bottom: 1rem;
+    margin: 1%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 4rem;
+    width: 4rem;
 }
 
 #esquerda{
