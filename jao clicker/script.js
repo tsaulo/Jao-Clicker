@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Aumenta os streams automaticamente com base no SPS a cada 1 segundo
     setInterval(aumentarStreamsPorSegundo, 1000);
     setInterval(updateLoja, 1000);
+    setInterval(updateAprimoramentos, 1000);
 });
 
 // LOJA
@@ -49,7 +50,8 @@ let loja = [
 
 loja = loja.map(item => ({
     ...item,
-    desc: `Aumenta o SPS em ${item.sps * item.mult}.`
+    desc: `,
+    total: `
 }));
 
 // APRIMORAMENTOS
@@ -58,76 +60,13 @@ const loboaprimoramento = document.getElementById('loboaprimoramento');
 
 let aprimoramentos = [
     { id: 1, nome: 'Cigarro', desc: 'Aumenta o poder do clique em 50%',
-    quote: 'Você me ensina a fumar?', preco: 25, tipo: "clique", mod: 1.5 },
+    quote: 'Você me ensina a fumar?', preco: 25, tipo: "clique", mod: 1.5, req: 0 },
 
     { id: 2, nome: 'Ressaca', desc: 'Aumenta a produção do Álcool em 50%',
-    quote: 'E de bar em bar, terminei no mar.', preco: 50, tipo: "mItem", mod: 1.5, IDItem: 1 },
+    quote: 'E de bar em bar, terminei no mar.', preco: 50, tipo: "mItem", mod: 1.5, IDItem: 1, req: 1 },
 
     { id: 3, nome: 'Própria Caminhada', desc: 'Aumenta a produção do Lobo em 50%',
-    quote: 'Nada do que você diz faz sentido algum...', preco: 100, tipo: "mItem", mod: 1.5, IDItem: 2 },
-
-    { id: 4, nome: 'Cigarro', desc: 'Aumenta o poder do clique em 50%',
-    quote: 'Você me ensina a fumar?', preco: 25, tipo: "clique", mod: 1.5 },
-
-    { id: 5, nome: 'Ressaca', desc: 'Aumenta a produção do Álcool em 50%',
-    quote: 'E de bar em bar, terminei no mar.', preco: 50, tipo: "mItem", mod: 1.5, IDItem: 1 },
-
-    { id: 6, nome: 'Própria Caminhada', desc: 'Aumenta a produção do Lobo em 50%',
-    quote: 'Nada do que você diz faz sentido algum...', preco: 100, tipo: "mItem", mod: 1.5, IDItem: 2 },
-
-    { id: 7, nome: 'Cigarro', desc: 'Aumenta o poder do clique em 50%',
-    quote: 'Você me ensina a fumar?', preco: 25, tipo: "clique", mod: 1.5 },
-
-    { id: 8, nome: 'Ressaca', desc: 'Aumenta a produção do Álcool em 50%',
-    quote: 'E de bar em bar, terminei no mar.', preco: 50, tipo: "mItem", mod: 1.5, IDItem: 1 },
-
-    { id: 9, nome: 'Própria Caminhada', desc: 'Aumenta a produção do Lobo em 50%',
-    quote: 'Nada do que você diz faz sentido algum...', preco: 100, tipo: "mItem", mod: 1.5, IDItem: 2 },
-
-    { id: 10, nome: 'Cigarro', desc: 'Aumenta o poder do clique em 50%',
-    quote: 'Você me ensina a fumar?', preco: 25, tipo: "clique", mod: 1.5 },
-
-    { id: 11, nome: 'Ressaca', desc: 'Aumenta a produção do Álcool em 50%',
-    quote: 'E de bar em bar, terminei no mar.', preco: 50, tipo: "mItem", mod: 1.5, IDItem: 1 },
-
-    { id: 12, nome: 'Própria Caminhada', desc: 'Aumenta a produção do Lobo em 50%',
-    quote: 'Nada do que você diz faz sentido algum...', preco: 100, tipo: "mItem", mod: 1.5, IDItem: 2 },
-
-    { id: 13, nome: 'Cigarro', desc: 'Aumenta o poder do clique em 50%',
-    quote: 'Você me ensina a fumar?', preco: 25, tipo: "clique", mod: 1.5 },
-
-    { id: 14, nome: 'Ressaca', desc: 'Aumenta a produção do Álcool em 50%',
-    quote: 'E de bar em bar, terminei no mar.', preco: 50, tipo: "mItem", mod: 1.5, IDItem: 1 },
-
-    { id: 15, nome: 'Própria Caminhada', desc: 'Aumenta a produção do Lobo em 50%',
-    quote: 'Nada do que você diz faz sentido algum...', preco: 100, tipo: "mItem", mod: 1.5, IDItem: 2 },
-
-    { id: 16, nome: 'Cigarro', desc: 'Aumenta o poder do clique em 50%',
-    quote: 'Você me ensina a fumar?', preco: 25, tipo: "clique", mod: 1.5 },
-
-    { id: 17, nome: 'Ressaca', desc: 'Aumenta a produção do Álcool em 50%',
-    quote: 'E de bar em bar, terminei no mar.', preco: 50, tipo: "mItem", mod: 1.5, IDItem: 1 },
-
-    { id: 18, nome: 'Própria Caminhada', desc: 'Aumenta a produção do Lobo em 50%',
-    quote: 'Nada do que você diz faz sentido algum...', preco: 100, tipo: "mItem", mod: 1.5, IDItem: 2 },
-
-    { id: 19, nome: 'Cigarro', desc: 'Aumenta o poder do clique em 50%',
-    quote: 'Você me ensina a fumar?', preco: 25, tipo: "clique", mod: 1.5 },
-
-    { id: 20, nome: 'Ressaca', desc: 'Aumenta a produção do Álcool em 50%',
-    quote: 'E de bar em bar, terminei no mar.', preco: 50, tipo: "mItem", mod: 1.5, IDItem: 1 },
-
-    { id: 21, nome: 'Própria Caminhada', desc: 'Aumenta a produção do Lobo em 50%',
-    quote: 'Nada do que você diz faz sentido algum...', preco: 100, tipo: "mItem", mod: 1.5, IDItem: 2 },
-
-    { id: 22, nome: 'Cigarro', desc: 'Aumenta o poder do clique em 50%',
-    quote: 'Você me ensina a fumar?', preco: 25, tipo: "clique", mod: 1.5 },
-
-    { id: 23, nome: 'Ressaca', desc: 'Aumenta a produção do Álcool em 50%',
-    quote: 'E de bar em bar, terminei no mar.', preco: 50, tipo: "mItem", mod: 1.5, IDItem: 1 },
-
-    { id: 24, nome: 'Própria Caminhada', desc: 'Aumenta a produção do Lobo em 50%',
-    quote: 'Nada do que você diz faz sentido algum...', preco: 100, tipo: "mItem", mod: 1.5, IDItem: 2 },
+    quote: 'Nada do que você diz faz sentido algum...', preco: 100, tipo: "mItem", mod: 1.5, IDItem: 2, req: 1 },
 ];
 
 // Atualiza a interface
@@ -218,6 +157,12 @@ function updateAprimoramentos(){
     loboaprimoramento.innerHTML = ''; // Limpa a lista
 
     aprimoramentos.forEach(apri => {
+        if (apri.IDItem !== undefined) {
+            const item = loja.find(i => i.id === apri.IDItem);
+            if (item && item.quantidade < apri.req) {
+                return; // Pula a criação do botão se a quantidade for insuficiente
+            }
+        }
         const botAp = document.createElement('button');
         botAp.className = 'algumAprimoramento';
         botAp.style.cursor = "pointer";
@@ -277,9 +222,11 @@ document.body.appendChild(detalhesLoja);
 function updateLoja() {
     loboloja.innerHTML = ''; // Limpa a loja
 
-    loja.forEach(item => {
+    loja.forEach(item => { 
         const spsTotal = item.sps * item.mult;
-        item.desc = `Aumenta o SPS em <strong>${spsTotal}</strong>.`;
+        const spsAtual = spsTotal * item.quantidade;
+        item.desc = `Aumenta o SPS em <strong>${spsTotal}</strong>;`
+        item.total = `Atualmente responsável por <strong>${spsAtual}</strong> SPS.`
 
         const botao = document.createElement('button');
         botao.className = 'itemDaLoja';
@@ -295,6 +242,7 @@ function updateLoja() {
                     <div style="padding-right: 1rem;">${item.nome}</div><div>${item.preco} streams</div>
                 </div>
                 <div style="border-top: 0.1rem solid black; padding-top: 0.5rem; margin-top: 0.5rem;">${item.desc}</div>
+                <div style="font-size: small">${item.total}</div>
                 <div style="text-align: right; font-size: small; padding-top: 0.25rem; color: red; font-style: italic;">"${item.quote}"</div>
                 <div style="border-top: 0.1rem solid black; font-size: x-small; padding-top: 0.5rem; margin-top: 0.5rem; text-align: center; font-weight: bold;">Clique para comprar.</div>
             `;
