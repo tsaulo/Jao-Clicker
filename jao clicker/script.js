@@ -1,4 +1,4 @@
-var streams = 1000;
+var streams = 0;
 var numero = 1;
 var modificadorC = 1;
 var sps = 0; 
@@ -175,6 +175,31 @@ function aprimorar(apriID){
 }
 
 // COMPRAS
+
+function comprar(itemID) {
+    const item = loja.find(i => i.id === itemID);
+
+    if (!item) {
+        console.error(`Item com ID ${itemID} não encontrado.`);
+        return;
+    }
+
+    if (streams >= item.preco) {
+        streams -= item.preco; // Deduz o preço dos streams
+        item.quantidade++; // Aumenta a quantidade comprada
+        item.preco = Math.round(item.inicio * Math.pow(1.2, item.quantidade)); // Atualiza o preço
+
+        // Atualiza os streams por segundo com base no item comprado
+        sps += item.sps * item.mult; // Adiciona o SPS do item comprado
+
+        console.log(`Comprado: ${item.nome} - Novo preço: ${item.preco} - Streams restantes: ${streams}`);
+        atualizarInterface(); // Atualiza os streams
+        updateLoja(); // Atualiza a loja
+    } else {
+        console.warn("Streams insuficientes!");
+    }
+}
+
 // Criar uma única div para os detalhes dos aprimoramentos
 const detalhesApri = document.createElement('div');
 detalhesApri.className = 'detalhes-aprimoramento';
