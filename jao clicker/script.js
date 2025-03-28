@@ -197,9 +197,9 @@ function updateAprimoramentos(){
             detalhesApri.style.display = 'none'; // Esconder a div ao comprar
         });
 
-        //if(apri.id > 5 && streams < apri.preco/5){
-        //    botAp.style.visibility = "hidden";
-        //}
+        if(apri.id > 1 && streams < apri.preco/5){
+        botAp.style.visibility = "hidden";
+        }
 
         loboaprimoramento.appendChild(botAp);
     });
