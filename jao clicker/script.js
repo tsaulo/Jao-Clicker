@@ -1,4 +1,4 @@
-let streams = 0;
+let streams = 100000;
 let numero = 1;
 let modificadorC = 1;
 let sps = 0;
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("sps").innerHTML = sps;
 
   // Aumenta os streams automaticamente com base no SPS a cada 1 segundo
-  setInterval(aumentarStreamsPorSegundo, 1000);
+  setInterval(aumentarStreamsPorSegundo, 100);
   setInterval(updateLoja, 1000);
   setInterval(updateAprimoramentos, 1000);
   setInterval(salvar, 30000);
@@ -51,163 +51,104 @@ const loboloja = document.getElementById("loboloja");
 let loja = [
   {
     id: 1,
-    nome: "Álcool",
-    inicio: 17,
-    preco: 17,
+    nome: "Cover",
+    inicio: 10,
+    preco: 10,
     quantidade: 0,
-    sps: 1,
+    sps: 0.1,
     mult: 1,
-    quote: "Quero dizer que esse álcool que me desce...",
+    quote: "Um bom cover nas redes sociais aumenta o número de streams.",
   },
   {
     id: 2,
-    nome: "..........",
-    inicio: 178,
-    preco: 178,
+    nome: "Karaoke",
+    inicio: 100,
+    preco: 100,
     quantidade: 0,
-    sps: 5,
+    sps: 1,
     mult: 1,
-    quote: "?",
+    quote: "Monopoliza o karaoke de um barzinho para mais streams.",
   },
   {
     id: 3,
-    nome: "Cruz",
+    nome: "Música Autoral",
     inicio: 1313,
     preco: 1313,
     quantidade: 0,
-    sps: 10,
+    sps: 13,
     mult: 1,
-    quote: "Porra, a gente se ama, isso é lindo demais!",
+    quote: "Gera streams numa plataforma de música.",
   },
   {
     id: 4,
-    nome: "Monstro",
-    inicio: 4619,
-    preco: 4619,
+    nome: "Pocket Show",
+    inicio: 10000,
+    preco: 10000,
     quantidade: 0,
     sps: 50,
     mult: 1,
-    quote: "Eu tenho fogo no olhar...",
+    quote: "Uma experiência intimista para impulsionar os streams.",
   },
   {
     id: 5,
-    nome: "Arqueiro",
-    inicio: 9102,
-    preco: 9102,
+    nome: "Videoclipe",
+    inicio: 100000,
+    preco: 100000,
     quantidade: 0,
     sps: 100,
     mult: 1,
-    quote: "Sou um anti-herói em queda na mira de um arqueiro",
+    quote: "Promove streams por meio de um clipe de um single.",
   },
   {
     id: 6,
-    nome: "............",
-    inicio: 21119,
-    preco: 21119,
-    quantidade: 0,
-    sps: 500,
-    mult: 1,
-    quote: "?",
-  },
-  {
-    id: 7,
-    nome: "Hotel",
-    inicio: 77777,
-    preco: 77777,
-    quantidade: 0,
-    sps: 1000,
-    mult: 1,
-    quote: "7 bocas com 7 segredos no quarto 7 do Hotel San Diego.",
-  },
-  {
-    id: 8,
-    nome: "Prédio",
-    inicio: 101019,
-    preco: 101019,
-    quantidade: 0,
-    sps: 5000,
-    mult: 1,
-    quote: "Uma noite no alto de um prédio...",
-  },
-  {
-    id: 9,
-    nome: "Navio",
-    inicio: 500000,
-    preco: 500000,
-    quantidade: 0,
-    sps: 10000,
-    mult: 1,
-    quote: "Eu sinto o vento trazendo algo novo!",
-  },
-  {
-    id: 10,
-    nome: "Doce",
+    nome: "Colaboração",
     inicio: 1000000,
     preco: 1000000,
     quantidade: 0,
-    sps: 50000,
+    sps: 1000,
     mult: 1,
-    quote: "Verde limão, várias cores...",
+    quote: "Um feat. com outro artista para provocar streams.",
   },
   {
-    id: 11,
-    nome: "...............",
-    inicio: 5000000,
-    preco: 5000000,
+    id: 7,
+    nome: "Turnê",
+    inicio: 1000000,
+    preco: 1000000,
     quantidade: 0,
-    sps: 100000,
+    sps: 5000,
     mult: 1,
-    quote: "?",
+    quote: "Estimula os fãs a gerarem streams depois do show.",
   },
   {
-    id: 12,
-    nome: "...................",
+    id: 8,
+    nome: "Merch",
     inicio: 10000000,
     preco: 10000000,
     quantidade: 0,
-    sps: 500000,
+    sps: 10000,
     mult: 1,
-    quote: "?",
+    quote: "Mercadoria oficial que incentiva os streams.",
   },
   {
-    id: 13,
-    nome: "Gameboy",
-    inicio: 50000000,
-    preco: 50000000,
-    quantidade: 0,
-    sps: 1000000,
-    mult: 1,
-    quote: "Seu brinquedo, seu herói!",
-  },
-  {
-    id: 14,
-    nome: "Rádio",
+    id: 9,
+    nome: "Festival",
     inicio: 100000000,
     preco: 100000000,
     quantidade: 0,
-    sps: 5000000,
+    sps: 100000,
     mult: 1,
-    quote: "Eu tenho um sonho... eu tenho um sonho...",
+    quote:
+      "Apresentar-se num festival faz pessoas que não te conheciam antes te darem streams.",
   },
   {
-    id: 15,
-    nome: "Locadora",
-    inicio: 500000000,
-    preco: 500000000,
+    id: 10,
+    nome: "Parceria",
+    inicio: 10000000,
+    preco: 10000000,
     quantidade: 0,
-    sps: 10000000,
+    sps: 1000000,
     mult: 1,
-    quote: "Virando a noite toda lá na Praça Sete",
-  },
-  {
-    id: 16,
-    nome: "..........",
-    inicio: 1000000000,
-    preco: 1000000000,
-    quantidade: 0,
-    sps: 50000000,
-    mult: 1,
-    quote: "?",
+    quote: "Uma parceria com uma marca famosa que estimula streams.",
   },
 ];
 
@@ -260,8 +201,8 @@ let aprimoramentos = [
 
 // Atualiza a interface
 function atualizarInterface() {
-  document.getElementById("streams").innerText = parseFloat(streams.toFixed(2));
-  document.getElementById("sps").innerText = parseFloat(sps.toFixed(2));
+  document.getElementById("streams").innerText = parseFloat(streams.toFixed(1));
+  document.getElementById("sps").innerText = parseFloat(sps.toFixed(1));
 }
 
 function calcSPS() {
@@ -315,7 +256,7 @@ function comprar(itemID) {
   if (streams >= item.preco) {
     streams -= item.preco; // Deduz o preço dos streams
     item.quantidade++; // Aumenta a quantidade comprada
-    item.preco = Math.round(item.inicio * Math.pow(1.2, item.quantidade)); // Atualiza o preço
+    item.preco = Math.round(item.inicio * Math.pow(1.15, item.quantidade)); // Atualiza o preço
 
     // Atualiza os streams por segundo com base no item comprado
     sps += item.sps * item.mult; // Adiciona o SPS do item comprado
@@ -416,8 +357,12 @@ function updateLoja() {
   loja.forEach((item) => {
     const spsTotal = item.sps * item.mult;
     const spsAtual = spsTotal * item.quantidade;
-    item.desc = `Aumenta o SPS em <strong>${spsTotal}</strong>;`;
-    item.total = `Atualmente responsável por <strong>${spsAtual}</strong> SPS.`;
+    item.desc = `Aumenta o SPS em <strong>${parseFloat(
+      spsTotal.toFixed(1)
+    )}</strong>`;
+    item.total = `Atualmente responsável por <strong>${parseFloat(
+      spsAtual.toFixed(1)
+    )}</strong> SPS.`;
 
     const botao = document.createElement("button");
     botao.className = "itemDaLoja";
@@ -433,7 +378,7 @@ function updateLoja() {
                 </div>
                 <div style="border-top: 0.1rem solid black; padding-top: 0.5rem; margin-top: 0.5rem;">${item.desc}</div>
                 <div style="font-size: small">${item.total}</div>
-                <div style="text-align: right; font-size: small; padding-top: 0.25rem; color: red; font-style: italic;">"${item.quote}"</div>
+                <div style="width: 50%; margin-left: 50%; justify-content: flex-end; text-align: right; font-size: small; padding-top: 0.25rem; color: red; font-style: italic;">"${item.quote}"</div>
                 <div style="border-top: 0.1rem solid black; font-size: x-small; padding-top: 0.5rem; margin-top: 0.5rem; text-align: center; font-weight: bold;">Clique para comprar.</div>
             `;
 
@@ -461,7 +406,7 @@ function updateLoja() {
 
 // Função para aumentar os streams por segundo
 function aumentarStreamsPorSegundo() {
-  streams += sps; // Aumenta os streams de acordo com os SPS acumulados
+  streams += sps / 10; // Aumenta os streams de acordo com os SPS acumulados
   atualizarInterface(); // Atualiza a interface para mostrar o novo valor de streams
 }
 
