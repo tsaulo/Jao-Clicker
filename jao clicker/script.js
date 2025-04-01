@@ -1,8 +1,12 @@
-let streams = 100000;
+let streams = 10000000;
 let numero = 1;
 let modificadorC = 1;
 let sps = 0;
 let skin = "skinLobos";
+
+function som(url) {
+  new Audio(url).play();
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   carregar();
@@ -143,8 +147,8 @@ let loja = [
   {
     id: 10,
     nome: "Parceria",
-    inicio: 10000000,
-    preco: 10000000,
+    inicio: 1000000000,
+    preco: 1000000000,
     quantidade: 0,
     sps: 1000000,
     mult: 1,
@@ -154,8 +158,8 @@ let loja = [
 
 loja = loja.map((item) => ({
   ...item,
-  desc: `,
-    total: `,
+  desc: ``,
+  total: ``,
 }));
 
 // APRIMORAMENTOS
@@ -170,7 +174,7 @@ let aprimoramentos = [
     quote: "Você me ensina a fumar?",
     preco: 25,
     tipo: "clique",
-    mod: 1.5,
+    mod: 0.5,
     req: 0,
   },
 
@@ -181,7 +185,7 @@ let aprimoramentos = [
     quote: "E de bar em bar, terminei no mar.",
     preco: 50,
     tipo: "mItem",
-    mod: 1.5,
+    mod: 0.5,
     IDItem: 1,
     req: 1,
   },
@@ -193,16 +197,41 @@ let aprimoramentos = [
     quote: "Nada do que você diz faz sentido algum...",
     preco: 100,
     tipo: "mItem",
-    mod: 1.5,
+    mod: 0.5,
     IDItem: 2,
     req: 1,
   },
 ];
 
 // Atualiza a interface
+function formatarNumero(numero) {
+  const sufixos = [
+    "",
+    "Mil",
+    "Mi.",
+    "Bi.",
+    "Tri.",
+    "Quatri.",
+    "Quinti.",
+    "Sexti.",
+    "Septi.",
+    "Octi.",
+    "Noni.",
+    "Deci.",
+  ];
+  let indice = 0;
+
+  while (numero >= 1000 && indice < sufixos.length - 1) {
+    numero /= 1000;
+    indice++;
+  }
+
+  return numero.toFixed(0) + " " + sufixos[indice];
+}
+
 function atualizarInterface() {
-  document.getElementById("streams").innerText = parseFloat(streams.toFixed(1));
-  document.getElementById("sps").innerText = parseFloat(sps.toFixed(1));
+  document.getElementById("streams").innerText = formatarNumero(streams);
+  document.getElementById("sps").innerText = formatarNumero(sps);
 }
 
 function calcSPS() {
@@ -214,6 +243,7 @@ function calcSPS() {
 
 // Função para clicar e aumentar os streams
 function clicar() {
+  som("sons/clique.mp3");
   streams += numero * modificadorC;
   atualizarInterface();
   updateLoja(); // Atualiza a loja após clicar
@@ -224,15 +254,16 @@ function aprimorar(apriID) {
   const apri = aprimoramentos.findIndex((a) => a.id === apriID);
 
   if (apri !== -1 && streams >= aprimoramentos[apri].preco) {
+    som("sons/aprimoramento.mp3");
     const aprimoramento = aprimoramentos[apri];
     streams -= aprimoramento.preco;
 
     if (aprimoramento.tipo == "clique") {
-      modificadorC *= aprimoramento.mod;
+      modificadorC += aprimoramento.mod;
     } else if (aprimoramento.tipo == "mItem") {
       const itemAP = loja.find((i) => i.id === aprimoramento.IDItem);
       if (itemAP) {
-        itemAP.mult *= aprimoramento.mod;
+        itemAP.mult += aprimoramento.mod;
         calcSPS();
       }
     }
@@ -254,6 +285,7 @@ function comprar(itemID) {
   }
 
   if (streams >= item.preco) {
+    som("sons/loja.mp3");
     streams -= item.preco; // Deduz o preço dos streams
     item.quantidade++; // Aumenta a quantidade comprada
     item.preco = Math.round(item.inicio * Math.pow(1.15, item.quantidade)); // Atualiza o preço
@@ -434,6 +466,7 @@ function escolhaSkin(tema) {
     document.getElementById(
       "meio"
     ).style.backgroundImage = `url(${qualSkin.cd})`;
+    som("sons/troca de skin.mp3");
 
     return;
   }
