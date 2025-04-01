@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jão Clicker</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="jaoclicker.css">
+</head>
+<body>
+    
+    <div id="esquerda">
+        <div class="asAbas">
+
+            <input type="radio" id="abaloja" name="abas" checked="checked">
+            
+            <label for="abaloja">LoJão</label>
+
+            <div class="aba">
+                <div id="loboloja">
+
+                </div>
+            </div>
+
+            <input type="radio" id="abaapri" name="abas">
+
+            <label for="abaapri">Aprimoramentos</label>
+
+            <div class="aba">
+                <div id="loboaprimoramento">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+<div id="meio">
+    <div id="texto">
+        <h1>JÃO CLICKER</h1>
+        <h2>streams: <span id="streams"></span></h2>
+        <h4>streams por segundo: <span id="sps"></span></h4><br/>
+    </div>
+    <div id="cd" class="cd">
+        <img id="imagem" src="fotocas/lobos sem fundo.png" onclick="clicar()">
+    </div>  
+</div>
+
+
+    <div id="direita">
+
+        <div class="diAbas">
+
+            <input type="radio" id="repertório" name="daba" checked="checked">
+            
+                <label for="repertório">Repertório</label> 
+
+                    <div class="daba">
+                        <div id="lobosRep"></div>
+                        <div id="antiheroiRep"></div>
+                        <div id="pirataRep"></div>
+                        <div id="superRep"></div>
+                    </div>
+
+            <input type="radio" id="config" name="daba">
+
+            <label for="config">Configurações</label>
+
+                <div class="daba">
+                    <div id="salvar">
+                        <button onclick="salvar()">SALVAR JOGO</button>
+                    </div>
+                    <h3>Tema</h3>
+                    <div id="skins">
+                        <button onclick="escolhaSkin('skinLobos')">Lobos</button> <br/>
+                        <button onclick="escolhaSkin('skinAntiHeroi')">Anti-Herói</button> <br/>
+                        <button onclick="escolhaSkin('skinPirata')">Pirata</button> <br/>
+                        <button onclick="escolhaSkin('skinSuper')">Super</button> <br/>
+                    </div> 
+                </div>
+        </div>
+    </div>
+    
+</body>
+</html>
