@@ -1,4 +1,4 @@
-let streams = 10000000;
+let streams = 10;
 let numero = 1;
 let modificadorC = 1;
 let sps = 0;
@@ -226,7 +226,7 @@ function formatarNumero(numero) {
     indice++;
   }
 
-  return numero.toFixed(0) + " " + sufixos[indice];
+  return numero.toFixed(1) + " " + sufixos[indice];
 }
 
 function atualizarInterface() {
