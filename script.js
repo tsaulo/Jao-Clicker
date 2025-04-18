@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // VARIÁVEIS IMPORTANTES
 let streams = 100; //streams atuais
 let clique = 1;
@@ -8,11 +9,27 @@ let sps = 0;
 // POR SEGUNDO
 document.addEventListener("DOMContentLoaded", () => {
   carregar();
+=======
+let streams = 10;
+let numero = 1;
+let modificadorC = 1;
+let sps = 0;
+let skin = "skinLobos";
+
+function som(url) {
+  new Audio(url).play();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  carregar();
+  escolhaSkin(skin);
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
   atualizarInterface();
 
   updateLoja();
   updateAprimoramentos();
   document.getElementById("sps").innerHTML = sps;
+<<<<<<< HEAD
   // Aumenta os streams automaticamente com base no SPS a cada 1 segundo
   setInterval(aumentarStreamsPorSegundo, 100);
   setInterval(updateLoja, updateAprimoramentos, atualizarClique, 1000);
@@ -203,10 +220,172 @@ let aprimoramentos = [
     tipo: "mItem",
     mod: 2,
     IDItem: 1,
+=======
+
+  // Aumenta os streams automaticamente com base no SPS a cada 1 segundo
+  setInterval(aumentarStreamsPorSegundo, 100);
+  setInterval(updateLoja, 1000);
+  setInterval(updateAprimoramentos, 1000);
+  setInterval(salvar, 30000);
+});
+
+function salvar() {
+  let salvo = {
+    streams,
+    modificadorC,
+    sps,
+    loja,
+    aprimoramentos,
+    skin,
+  };
+  localStorage.setItem("salvo", JSON.stringify(salvo));
+}
+
+function carregar() {
+  const data = localStorage.getItem("salvo");
+  if (data) {
+    let arquivo = JSON.parse(data);
+    if (arquivo.streams) streams = arquivo.streams;
+    if (arquivo.modificadorC) modificadorC = arquivo.modificadorC;
+    if (arquivo.sps) sps = arquivo.sps;
+    if (arquivo.loja) loja = arquivo.loja;
+    if (arquivo.aprimoramentos) aprimoramentos = arquivo.aprimoramentos;
+    if (arquivo.skin) skin = arquivo.skin;
+  }
+}
+
+// LOJA
+const loboloja = document.getElementById("loboloja");
+
+let loja = [
+  {
+    id: 1,
+    nome: "Cover",
+    inicio: 10,
+    preco: 10,
+    quantidade: 0,
+    sps: 0.1,
+    mult: 1,
+    quote: "Um bom cover nas redes sociais aumenta o número de streams.",
+  },
+  {
+    id: 2,
+    nome: "Karaoke",
+    inicio: 100,
+    preco: 100,
+    quantidade: 0,
+    sps: 1,
+    mult: 1,
+    quote: "Monopoliza o karaoke de um barzinho para mais streams.",
+  },
+  {
+    id: 3,
+    nome: "Música Autoral",
+    inicio: 1313,
+    preco: 1313,
+    quantidade: 0,
+    sps: 13,
+    mult: 1,
+    quote: "Gera streams numa plataforma de música.",
+  },
+  {
+    id: 4,
+    nome: "Pocket Show",
+    inicio: 10000,
+    preco: 10000,
+    quantidade: 0,
+    sps: 50,
+    mult: 1,
+    quote: "Uma experiência intimista para impulsionar os streams.",
+  },
+  {
+    id: 5,
+    nome: "Videoclipe",
+    inicio: 100000,
+    preco: 100000,
+    quantidade: 0,
+    sps: 100,
+    mult: 1,
+    quote: "Promove streams por meio de um clipe de um single.",
+  },
+  {
+    id: 6,
+    nome: "Colaboração",
+    inicio: 1000000,
+    preco: 1000000,
+    quantidade: 0,
+    sps: 1000,
+    mult: 1,
+    quote: "Um feat. com outro artista para provocar streams.",
+  },
+  {
+    id: 7,
+    nome: "Turnê",
+    inicio: 1000000,
+    preco: 1000000,
+    quantidade: 0,
+    sps: 5000,
+    mult: 1,
+    quote: "Estimula os fãs a gerarem streams depois do show.",
+  },
+  {
+    id: 8,
+    nome: "Merch",
+    inicio: 10000000,
+    preco: 10000000,
+    quantidade: 0,
+    sps: 10000,
+    mult: 1,
+    quote: "Mercadoria oficial que incentiva os streams.",
+  },
+  {
+    id: 9,
+    nome: "Festival",
+    inicio: 100000000,
+    preco: 100000000,
+    quantidade: 0,
+    sps: 100000,
+    mult: 1,
+    quote:
+      "Apresentar-se num festival faz pessoas que não te conheciam antes te darem streams.",
+  },
+  {
+    id: 10,
+    nome: "Parceria",
+    inicio: 1000000000,
+    preco: 1000000000,
+    quantidade: 0,
+    sps: 1000000,
+    mult: 1,
+    quote: "Uma parceria com uma marca famosa que estimula streams.",
+  },
+];
+
+loja = loja.map((item) => ({
+  ...item,
+  desc: ``,
+  total: ``,
+}));
+
+// APRIMORAMENTOS
+
+const loboaprimoramento = document.getElementById("loboaprimoramento");
+
+let aprimoramentos = [
+  {
+    id: 1,
+    nome: "Cigarro",
+    desc: "Aumenta o poder do clique em 50%",
+    quote: "Você me ensina a fumar?",
+    preco: 25,
+    tipo: "clique",
+    mod: 0.5,
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
     req: 0,
   },
 
   {
+<<<<<<< HEAD
     id: 28,
     nome: "Alinhamento Milenar",
     desc: "Singles produzem 2x mais streams",
@@ -225,6 +404,13 @@ let aprimoramentos = [
     desc: "Aumenta a produção do Álcool em 50%",
     quote: "E de bar em bar, terminei no mar.",
     preco: 500,
+=======
+    id: 2,
+    nome: "Ressaca",
+    desc: "Aumenta a produção do Álcool em 50%",
+    quote: "E de bar em bar, terminei no mar.",
+    preco: 50,
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
     tipo: "mItem",
     mod: 0.5,
     IDItem: 1,
@@ -232,7 +418,11 @@ let aprimoramentos = [
   },
 
   {
+<<<<<<< HEAD
     id: 50,
+=======
+    id: 3,
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
     nome: "Própria Caminhada",
     desc: "Aumenta a produção do Lobo em 50%",
     quote: "Nada do que você diz faz sentido algum...",
@@ -244,6 +434,56 @@ let aprimoramentos = [
   },
 ];
 
+<<<<<<< HEAD
+=======
+// Atualiza a interface
+function formatarNumero(numero) {
+  const sufixos = [
+    "",
+    "Mil",
+    "Mi.",
+    "Bi.",
+    "Tri.",
+    "Quatri.",
+    "Quinti.",
+    "Sexti.",
+    "Septi.",
+    "Octi.",
+    "Noni.",
+    "Deci.",
+  ];
+  let indice = 0;
+
+  while (numero >= 1000 && indice < sufixos.length - 1) {
+    numero /= 1000;
+    indice++;
+  }
+
+  return numero.toFixed(1) + " " + sufixos[indice];
+}
+
+function atualizarInterface() {
+  document.getElementById("streams").innerText = formatarNumero(streams);
+  document.getElementById("sps").innerText = formatarNumero(sps);
+}
+
+function calcSPS() {
+  sps = 0;
+  loja.forEach((item) => {
+    sps += item.sps * item.quantidade * item.mult;
+  });
+}
+
+// Função para clicar e aumentar os streams
+function clicar() {
+  som("sons/clique.mp3");
+  streams += numero * modificadorC;
+  atualizarInterface();
+  updateLoja(); // Atualiza a loja após clicar
+  updateAprimoramentos();
+}
+
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 function aprimorar(apriID) {
   const apri = aprimoramentos.findIndex((a) => a.id === apriID);
 
@@ -253,14 +493,21 @@ function aprimorar(apriID) {
     streams -= aprimoramento.preco;
 
     if (aprimoramento.tipo == "clique") {
+<<<<<<< HEAD
       modificadorC *= aprimoramento.mod;
       atualizarClique();
+=======
+      modificadorC += aprimoramento.mod;
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
     } else if (aprimoramento.tipo == "mItem") {
       const itemAP = loja.find((i) => i.id === aprimoramento.IDItem);
       if (itemAP) {
         itemAP.mult += aprimoramento.mod;
         calcSPS();
+<<<<<<< HEAD
         atualizarClique();
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
       }
     }
     aprimoramentos.splice(apri, 1);
@@ -270,8 +517,55 @@ function aprimorar(apriID) {
   }
 }
 
+<<<<<<< HEAD
 function updateAprimoramentos() {
   detalhesApri.style.display = "none";
+=======
+// COMPRAS
+
+function comprar(itemID) {
+  const item = loja.find((i) => i.id === itemID);
+
+  if (!item) {
+    console.error(`Item com ID ${itemID} não encontrado.`);
+    return;
+  }
+
+  if (streams >= item.preco) {
+    som("sons/loja.mp3");
+    streams -= item.preco; // Deduz o preço dos streams
+    item.quantidade++; // Aumenta a quantidade comprada
+    item.preco = Math.round(item.inicio * Math.pow(1.15, item.quantidade)); // Atualiza o preço
+
+    // Atualiza os streams por segundo com base no item comprado
+    sps += item.sps * item.mult; // Adiciona o SPS do item comprado
+
+    console.log(
+      `Comprado: ${item.nome} - Novo preço: ${item.preco} - Streams restantes: ${streams}`
+    );
+    atualizarInterface(); // Atualiza os streams
+    updateLoja(); // Atualiza a loja
+  } else {
+    console.warn("Streams insuficientes!");
+  }
+}
+
+// Criar uma única div para os detalhes dos aprimoramentos
+const detalhesApri = document.createElement("div");
+detalhesApri.className = "detalhes-aprimoramento";
+detalhesApri.style.position = "absolute";
+detalhesApri.style.color = "black";
+detalhesApri.style.backgroundColor = "white";
+detalhesApri.style.width = "max-content";
+detalhesApri.style.cursor = "auto";
+detalhesApri.style.border = "1px solid black";
+detalhesApri.style.padding = "10px";
+detalhesApri.style.display = "none";
+detalhesApri.style.zIndex = "1000";
+document.body.appendChild(detalhesApri);
+
+function updateAprimoramentos() {
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
   loboaprimoramento.innerHTML = ""; // Limpa a lista
 
   aprimoramentos.forEach((apri) => {
@@ -323,6 +617,7 @@ function updateAprimoramentos() {
   });
 }
 
+<<<<<<< HEAD
 //LOJA
 const loboloja = document.getElementById("loboloja");
 const detalhesLoja = document.createElement("div");
@@ -441,6 +736,23 @@ loja = loja.map((item) => ({
 
 function updateLoja() {
   detalhesLoja.style.display = "none";
+=======
+// Atualiza a loja (botões)
+const detalhesLoja = document.createElement("div");
+detalhesLoja.className = "detalhes-loja";
+detalhesLoja.style.position = "absolute";
+detalhesLoja.style.color = "black";
+detalhesLoja.style.backgroundColor = "white";
+detalhesLoja.style.width = "max-content";
+detalhesLoja.style.cursor = "auto";
+detalhesLoja.style.border = "1px solid black";
+detalhesLoja.style.padding = "10px";
+detalhesLoja.style.display = "none";
+detalhesLoja.style.zIndex = "1000";
+document.body.appendChild(detalhesLoja);
+
+function updateLoja() {
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
   loboloja.innerHTML = ""; // Limpa a loja
 
   loja.forEach((item) => {
@@ -455,7 +767,12 @@ function updateLoja() {
 
     const botao = document.createElement("button");
     botao.className = "itemDaLoja";
+<<<<<<< HEAD
     botao.innerHTML = ` <div> ${item.quantidade}  ${item.nome} ${item.preco} streams </div>`;
+=======
+    botao.innerHTML = `<div style= "width: max-content; font-size: 2.2rem; font-weight: 600; float: left; padding-right: 2%; padding-left: 1%;">${item.quantidade}</div> 
+        ${item.nome}<br/>${item.preco} streams`;
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 
     // Evento para mostrar a div de detalhes sem recriá-la
     botao.addEventListener("mouseenter", () => {
@@ -467,6 +784,7 @@ function updateLoja() {
                 <div style="border-top: 0.1rem solid black; padding-top: 0.5rem; margin-top: 0.5rem;">${item.desc}</div>
                 <div style="font-size: small">${item.total}</div>
                 <div style="width: 50%; margin-left: 50%; justify-content: flex-end; text-align: right; font-size: small; padding-top: 0.25rem; color: red; font-style: italic;">"${item.quote}"</div>
+<<<<<<< HEAD
                 <div style="border-top: 0.1rem solid black; font-size: x-small; padding-top: 0.5rem; margin-top: 0.5rem; text-align: center; font-weight: bold;">Clique para comprar.</div>`;
 
       // Define a posição fixa ao lado do botão
@@ -478,6 +796,21 @@ function updateLoja() {
     botao.style.height = "6%";
 
     // Evento para esconder a div de detalhes
+=======
+                <div style="border-top: 0.1rem solid black; font-size: x-small; padding-top: 0.5rem; margin-top: 0.5rem; text-align: center; font-weight: bold;">Clique para comprar.</div>
+            `;
+
+      // Define a posição fixa ao lado do botão
+      const botaoRect = botao.getBoundingClientRect();
+      detalhesLoja.style.left = `${botaoRect.right + 10}px`;
+      detalhesLoja.style.top = `${botaoRect.top}px`;
+    });
+
+    // Evento para esconder a div de detalhes
+    botao.addEventListener("mouseleave", () => {
+      detalhesLoja.style.display = "none";
+    });
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 
     if (item.id != 1 && streams < item.inicio / 3 && item.quantidade == 0) {
       botao.style.visibility = "hidden";
@@ -486,14 +819,18 @@ function updateLoja() {
     botao.disabled = streams < item.preco;
     botao.addEventListener("click", () => comprar(item.id));
 
+<<<<<<< HEAD
     detalhesLoja.addEventListener("mouseleave", (event) => {
       detalhesLoja.style.display = "none";
     });
 
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
     loboloja.appendChild(botao);
   });
 }
 
+<<<<<<< HEAD
 //FUNÇÕES AUXILIARES
 function atualizarInterface() {
   document.getElementById("streams").innerText = formatarNumero(streams);
@@ -532,11 +869,15 @@ function som(url) {
 
 //FUNÇÕES PRINCIPAIS
 
+=======
+// Função para aumentar os streams por segundo
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 function aumentarStreamsPorSegundo() {
   streams += sps / 10; // Aumenta os streams de acordo com os SPS acumulados
   atualizarInterface(); // Atualiza a interface para mostrar o novo valor de streams
 }
 
+<<<<<<< HEAD
 function calcSPS() {
   sps = 0;
   loja.forEach((item) => {
@@ -650,4 +991,37 @@ function carregar() {
     if (arquivo.loja) loja = arquivo.loja;
     if (arquivo.aprimoramentos) aprimoramentos = arquivo.aprimoramentos;
   }
+=======
+// SKINS
+const skinLobos = "fotocas/lobos sem fundo.png";
+const skinAntiHeroi = "fotocas/anti heroi sem fundo.png";
+const skinPirata = "fotocas/pirata sem fundo.png";
+const skinSuper = "fotocas/super sem fundo.png";
+
+const skinsBackground = {
+  skinLobos: { bg: "fotocas/lobos sem fundo.png", cd: "fotocas/LOBOS.png" },
+  skinAntiHeroi: {
+    bg: "fotocas/anti heroi sem fundo.png",
+    cd: "fotocas/ANTIHEROI.png",
+  },
+  skinPirata: { bg: "fotocas/pirata sem fundo.png", cd: "fotocas/PIRATA.png" },
+  skinSuper: { bg: "fotocas/super sem fundo.png", cd: "fotocas/SUPER.png" },
+};
+
+function escolhaSkin(tema) {
+  skin = tema;
+  const qualSkin = skinsBackground[tema];
+  if (qualSkin) {
+    document.getElementById("imagem").src = qualSkin.bg;
+    document.getElementById(
+      "meio"
+    ).style.backgroundImage = `url(${qualSkin.cd})`;
+    som("sons/troca de skin.mp3");
+
+    return;
+  }
+  document.getElementById("imagem").src = skinLobos;
+  document.getElementById("meio").style.backgroundImage =
+    "url(fotocas/LOBOS.png)";
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 }
