@@ -1,191 +1,138 @@
-.asAbas{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.asAbas input[type="radio"]{
+.aba{
     display: none;
-}
-
-.asAbas label{
-    padding: 5%;
-    background: rgb(207, 207, 207);
-    font-weight: bold;
-    color: black;
-    cursor: pointer;
-}
-
-.asAbas .aba{
-    width: 100%;
-    background: white;
-    padding: 5%;
-    order: 1;
-    display: none;
-}
-
-.asAbas .aba button{
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-}
-
-.asAbas input[type='radio']:checked + label + .aba {
-    display: block;
-}
-
-.asAbas input[type='radio']:checked + label {
-    background: white;
-}
-
-.diAbas{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.diAbas input[type="radio"]{
-    display: none;
-}
-
-.diAbas label{
-    padding: 5%;
-    background: rgb(207, 207, 207);
-    font-weight: bold;
-    color: black;
-    cursor: pointer;
-}
-
-.diAbas .daba{
-    width: 100%;
-    background: white;
-    padding: 5%;
-    order: 1;
-    display: none;
-}
-
-.diAbas .daba button{
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-}
-
-.diAbas input[type='radio']:checked + label + .daba {
-    display: block;
-}
-
-.diAbas input[type='radio']:checked + label {
-    background: white;
-}
-
-.diAbas .daba h3{
-    color: black;
-}
-
-html{
+    background-color: rgb(199, 199, 199);
     height: 100%;
+    width: 100%;
 }
 
 body{
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    color: aliceblue;
-    font-family: Georgia;
-}
-
-button{
-    height: 4rem;
-    width: fit-content;
-    font-size: large;
-    font-family: Georgia;
-}
-
-#loboloja button{
-    display: block;
-    margin-bottom: 1rem;
-}
-
-#loboaprimoramento{
     display: flex;
-    height: 100%;
-    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    margin: 0;
+    background-color: rgb(35, 35, 39);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.clicker{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(fotocas/LOBOS.png);
+    background-size: cover;
+    width: 768px;
+    height: 100vh;
+    text-align: center;
     
 }
 
-#loboaprimoramento button{
-    margin: 1%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    height: 4rem;
-    width: 4rem;
+.correcao{
+    height: 15vh;
 }
 
-#esquerda{
-    display: inline-flex;
-    width: 33%;
-    align-items: flex-start;
-    float: left;
-    height: 100%;
-    flex-direction: column;
-    overflow-y: auto;
-
+.dados{
+    height: 20vh;
+    color: #ededed;
+    padding-top: 6vh;
+    padding-bottom: 2vh;
 }
 
-
-#meio{
-    height: 100%;
-    width: 34%;
-    float: left;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url(fotocas/LOBOS.png);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-
-#texto{
-    text-align: center;
+.detalhes{
     position: absolute;
-    top: 3rem;
+    color: black;
+    background-color: white;
+    width: max-content;
+    cursor: auto;
+    border: 1px solid black;
+    padding: 10px;
+    display: none;
+    zIndex: 1000;
 }
 
-#texto h1{
-    margin: -2%;
+.escolha {
+    align-items: center;
+    height: 12vh;
+    width: 12vh;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    color: #0e0e0e;
 }
 
-
-#direita{
-    display: inline-flex;
-    width: 33%;
-    margin-left: auto;
-    float: left;
-    height: 100%;
-    flex-direction:column;
-    overflow-y: auto;
+.escolha img {
+    height: 8vh;
+    width: 8vh;
 }
 
+.escolha:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
 
+.escolha:active{
+    background-color: rgba(0, 0, 0, 0.1);
+}
 
-#imagem {
-    padding: 0rem;
-    margin-left: 0rem;
-    width: 20rem;
-    height: 20rem;
+.escolha .select{
+    display: none;
+}
+
+.escolha .normal{
+    display: block;
+}
+
+.escolha.ativo {
+    color: #ededed;
+}
+
+.escolha.ativo .select{
+    display: block;
+}
+
+.escolha.ativo .normal{
+    display: none;
+}
+
+#feedback-clique {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6vh;
+    color: white;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transição suave para o desaparecimento */
+    pointer-events: none; /* Permite cliques na área abaixo */
+    z-index: 1000;
+  }
+
+html button{
     cursor: pointer;
-    animation-name: spin;
+    margin: 1%;
+}
+
+h3{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+#imagem{
+    position: relative;
+    cursor: pointer;
+    height: 40vh;
+    animation-name: rodar;
     animation-duration: 30000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     transform-origin: center;
-    transition: width 0.3s ease, height 0.3s ease, margin-top 0.3s ease, margin-left 0.3s ease, margin-bottom 0.3s ease;  /* Transição suave */
+    transition: width 0.3s ease, height 0.3s ease, margin-top 0.3s ease, margin-left 0.3s ease, margin-bottom 0.3s ease;
 }
 
-@keyframes spin {
+@keyframes rodar {
     from {
         transform: rotate(0deg);
     }
@@ -194,16 +141,71 @@ button{
     }
 }
 
-#imagem:hover {
-    width: 21rem;
-    height: 21rem;
-    margin-top: -0.5rem;
-    margin-bottom: -0.5rem ;
+#imagem:hover{
+    height: 42vh;
+    margin-top: -1vh;
+    margin-bottom: -1vh;
 }
 
-#imagem:active {
-    width: 19.5rem;
-    height: 19.5rem;
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem ;
+#imagem:active{
+    height: 38vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.infobar{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 3vh;
+}
+
+.infobar button{
+    height: 3vh;
+}
+
+#loja{
+    height: 100vh;
+}
+
+#loboloja{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+    flex-wrap: wrap;
+}
+
+.navbar{
+    display: flex;
+    height: 12vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.streams-voadores {
+    position: absolute;
+    color: white;
+    font-size: 4vh;
+    font-weight: bold;
+    pointer-events: none;
+    animation: floatUp 1s ease-out forwards;
+    z-index: 9999;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
 }
