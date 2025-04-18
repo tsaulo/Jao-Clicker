@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 .aba{
     display: none;
     background-color: rgb(199, 199, 199);
@@ -128,150 +125,14 @@ h3{
     cursor: pointer;
     height: 40vh;
     animation-name: rodar;
-=======
-=======
->>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
-=======
->>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
-.asAbas{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.asAbas input[type="radio"]{
-    display: none;
-}
-
-.asAbas label{
-    text-align: center;
-    background: rgb(207, 207, 207);
-    font-weight: bold;
-    color: black;
-    cursor: pointer;
-    order: 1;
-    padding: 0%;
-}
-
-.asAbas .aba{
-    width: 100%;
-    height: 90vh;
-    background: white;
-    padding: 5%;
-    order: 0;
-    display: none;
-}
-
-.asAbas .aba button{
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-}
-
-.asAbas input[type='radio']:checked + label + .aba {
-    display: block;
-}
-
-.asAbas input[type='radio']:checked + label {
-    background: white;
-}
-
-
-body{
-    padding: 0;
-    border: 0;
-    margin: 0;
-    background-color: black;
-    color: aliceblue;
-    font-family: Georgia;
-
-}
-
-button{
-    height: 4rem;
-    width: fit-content;
-    font-size: large;
-    font-family: Georgia;
-}
-
-#loboloja button{
-    display: block;
-    margin-bottom: 1rem;
-}
-
-#loboaprimoramento{
-    display: flex;
-    height: 100%;
-    flex-wrap: wrap;
-    
-}
-
-#loboaprimoramento button{
-    margin: 1%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    height: 4rem;
-    width: 4rem;
-}
-
-
-#meio{
-    margin: 0 auto;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-    width: 768px;
-    background-image: url(fotocas/LOBOS.png);
-    background-size: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-
-
-#imagem {
-    padding: 0rem;
-    margin-left: 0rem;
-    width: 25rem;
-    height: 25rem;
-    cursor: pointer;
-    animation-name: spin;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
-=======
->>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
-=======
->>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
     animation-duration: 30000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     transform-origin: center;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     transition: width 0.3s ease, height 0.3s ease, margin-top 0.3s ease, margin-left 0.3s ease, margin-bottom 0.3s ease;
 }
 
 @keyframes rodar {
-=======
-=======
->>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
-=======
->>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
-    transition: width 0.3s ease, height 0.3s ease, margin-top 0.3s ease, margin-left 0.3s ease, margin-bottom 0.3s ease;  /* Transição suave */
-}
-
-@keyframes spin {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
-=======
->>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
-=======
->>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
     from {
         transform: rotate(0deg);
     }
@@ -280,9 +141,6 @@ button{
     }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #imagem:hover{
     height: 42vh;
     margin-top: -1vh;
@@ -350,28 +208,4 @@ button{
         opacity: 0;
         transform: translateY(-50px);
     }
-=======
-=======
->>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
-=======
->>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
-#imagem:hover {
-    width: 26.5rem;
-    height: 26.5rem;
-    margin-top: -0.75rem;
-    margin-bottom: -0.75rem ;
-}
-
-#imagem:active {
-    width: 24.5rem;
-    height: 24.5rem;
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
-=======
->>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
-=======
->>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 }
