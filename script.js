@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // VARIÁVEIS IMPORTANTES
 let streams = 100; //streams atuais
 let clique = 1;
@@ -11,6 +12,8 @@ let sps = 0;
 document.addEventListener("DOMContentLoaded", () => {
   carregar();
 =======
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 let streams = 10;
@@ -27,6 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
   carregar();
   escolhaSkin(skin);
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
@@ -35,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateLoja();
   updateAprimoramentos();
   document.getElementById("sps").innerHTML = sps;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   // Aumenta os streams automaticamente com base no SPS a cada 1 segundo
@@ -230,6 +237,8 @@ let aprimoramentos = [
 =======
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 
   // Aumenta os streams automaticamente com base no SPS a cada 1 segundo
   setInterval(aumentarStreamsPorSegundo, 100);
@@ -390,6 +399,9 @@ let aprimoramentos = [
     tipo: "clique",
     mod: 0.5,
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
@@ -397,6 +409,7 @@ let aprimoramentos = [
   },
 
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     id: 28,
@@ -420,12 +433,17 @@ let aprimoramentos = [
 =======
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
     id: 2,
     nome: "Ressaca",
     desc: "Aumenta a produção do Álcool em 50%",
     quote: "E de bar em bar, terminei no mar.",
     preco: 50,
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
@@ -438,7 +456,11 @@ let aprimoramentos = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: 50,
+=======
+    id: 3,
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
     id: 3,
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
@@ -458,7 +480,10 @@ let aprimoramentos = [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 // Atualiza a interface
@@ -509,6 +534,9 @@ function clicar() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
@@ -523,8 +551,12 @@ function aprimorar(apriID) {
     if (aprimoramento.tipo == "clique") {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       modificadorC *= aprimoramento.mod;
       atualizarClique();
+=======
+      modificadorC += aprimoramento.mod;
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
       modificadorC += aprimoramento.mod;
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
@@ -538,7 +570,10 @@ function aprimorar(apriID) {
         calcSPS();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         atualizarClique();
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
@@ -554,9 +589,12 @@ function aprimorar(apriID) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 function updateAprimoramentos() {
   detalhesApri.style.display = "none";
 =======
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 // COMPRAS
@@ -604,6 +642,9 @@ document.body.appendChild(detalhesApri);
 
 function updateAprimoramentos() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
@@ -658,6 +699,7 @@ function updateAprimoramentos() {
   });
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 //LOJA
@@ -781,6 +823,8 @@ function updateLoja() {
 =======
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 // Atualiza a loja (botões)
 const detalhesLoja = document.createElement("div");
 detalhesLoja.className = "detalhes-loja";
@@ -797,6 +841,9 @@ document.body.appendChild(detalhesLoja);
 
 function updateLoja() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
@@ -816,7 +863,12 @@ function updateLoja() {
     botao.className = "itemDaLoja";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     botao.innerHTML = ` <div> ${item.quantidade}  ${item.nome} ${item.preco} streams </div>`;
+=======
+    botao.innerHTML = `<div style= "width: max-content; font-size: 2.2rem; font-weight: 600; float: left; padding-right: 2%; padding-left: 1%;">${item.quantidade}</div> 
+        ${item.nome}<br/>${item.preco} streams`;
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
     botao.innerHTML = `<div style= "width: max-content; font-size: 2.2rem; font-weight: 600; float: left; padding-right: 2%; padding-left: 1%;">${item.quantidade}</div> 
         ${item.nome}<br/>${item.preco} streams`;
@@ -838,6 +890,7 @@ function updateLoja() {
                 <div style="width: 50%; margin-left: 50%; justify-content: flex-end; text-align: right; font-size: small; padding-top: 0.25rem; color: red; font-style: italic;">"${item.quote}"</div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div style="border-top: 0.1rem solid black; font-size: x-small; padding-top: 0.5rem; margin-top: 0.5rem; text-align: center; font-weight: bold;">Clique para comprar.</div>`;
 
       // Define a posição fixa ao lado do botão
@@ -850,6 +903,8 @@ function updateLoja() {
 
     // Evento para esconder a div de detalhes
 =======
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
                 <div style="border-top: 0.1rem solid black; font-size: x-small; padding-top: 0.5rem; margin-top: 0.5rem; text-align: center; font-weight: bold;">Clique para comprar.</div>
@@ -866,6 +921,9 @@ function updateLoja() {
       detalhesLoja.style.display = "none";
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
@@ -879,6 +937,7 @@ function updateLoja() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     detalhesLoja.addEventListener("mouseleave", (event) => {
       detalhesLoja.style.display = "none";
     });
@@ -887,10 +946,13 @@ function updateLoja() {
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
     loboloja.appendChild(botao);
   });
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 //FUNÇÕES AUXILIARES
@@ -937,11 +999,15 @@ function som(url) {
 =======
 // Função para aumentar os streams por segundo
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
+// Função para aumentar os streams por segundo
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 function aumentarStreamsPorSegundo() {
   streams += sps / 10; // Aumenta os streams de acordo com os SPS acumulados
   atualizarInterface(); // Atualiza a interface para mostrar o novo valor de streams
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 function calcSPS() {
@@ -1060,6 +1126,8 @@ function carregar() {
 =======
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 // SKINS
 const skinLobos = "fotocas/lobos sem fundo.png";
 const skinAntiHeroi = "fotocas/anti heroi sem fundo.png";
@@ -1092,6 +1160,9 @@ function escolhaSkin(tema) {
   document.getElementById("meio").style.backgroundImage =
     "url(fotocas/LOBOS.png)";
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b

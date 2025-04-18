@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .aba{
     display: none;
     background-color: rgb(199, 199, 199);
@@ -130,6 +131,8 @@ h3{
 =======
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 .asAbas{
     display: flex;
     flex-wrap: wrap;
@@ -236,6 +239,9 @@ button{
     cursor: pointer;
     animation-name: spin;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
@@ -245,6 +251,7 @@ button{
     transform-origin: center;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transition: width 0.3s ease, height 0.3s ease, margin-top 0.3s ease, margin-left 0.3s ease, margin-bottom 0.3s ease;
 }
 
@@ -252,11 +259,16 @@ button{
 =======
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
     transition: width 0.3s ease, height 0.3s ease, margin-top 0.3s ease, margin-left 0.3s ease, margin-bottom 0.3s ease;  /* Transição suave */
 }
 
 @keyframes spin {
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
@@ -268,6 +280,7 @@ button{
     }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 #imagem:hover{
@@ -340,6 +353,8 @@ button{
 =======
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 #imagem:hover {
     width: 26.5rem;
     height: 26.5rem;
@@ -353,6 +368,9 @@ button{
     margin-top: 0.25rem;
     margin-bottom: 0.25rem ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
