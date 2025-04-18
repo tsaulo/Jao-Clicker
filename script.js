@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // VARIÁVEIS IMPORTANTES
 let streams = 100; //streams atuais
 let clique = 1;
@@ -10,6 +11,8 @@ let sps = 0;
 document.addEventListener("DOMContentLoaded", () => {
   carregar();
 =======
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 let streams = 10;
 let numero = 1;
 let modificadorC = 1;
@@ -23,12 +26,16 @@ function som(url) {
 document.addEventListener("DOMContentLoaded", () => {
   carregar();
   escolhaSkin(skin);
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
   atualizarInterface();
 
   updateLoja();
   updateAprimoramentos();
   document.getElementById("sps").innerHTML = sps;
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Aumenta os streams automaticamente com base no SPS a cada 1 segundo
   setInterval(aumentarStreamsPorSegundo, 100);
@@ -221,6 +228,8 @@ let aprimoramentos = [
     mod: 2,
     IDItem: 1,
 =======
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 
   // Aumenta os streams automaticamente com base no SPS a cada 1 segundo
   setInterval(aumentarStreamsPorSegundo, 100);
@@ -380,11 +389,15 @@ let aprimoramentos = [
     preco: 25,
     tipo: "clique",
     mod: 0.5,
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
     req: 0,
   },
 
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: 28,
     nome: "Alinhamento Milenar",
@@ -405,11 +418,16 @@ let aprimoramentos = [
     quote: "E de bar em bar, terminei no mar.",
     preco: 500,
 =======
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
     id: 2,
     nome: "Ressaca",
     desc: "Aumenta a produção do Álcool em 50%",
     quote: "E de bar em bar, terminei no mar.",
     preco: 50,
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
     tipo: "mItem",
     mod: 0.5,
@@ -419,7 +437,11 @@ let aprimoramentos = [
 
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: 50,
+=======
+    id: 3,
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
     id: 3,
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
@@ -435,7 +457,10 @@ let aprimoramentos = [
 ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 // Atualiza a interface
 function formatarNumero(numero) {
   const sufixos = [
@@ -483,6 +508,9 @@ function clicar() {
   updateAprimoramentos();
 }
 
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 function aprimorar(apriID) {
   const apri = aprimoramentos.findIndex((a) => a.id === apriID);
@@ -494,8 +522,12 @@ function aprimorar(apriID) {
 
     if (aprimoramento.tipo == "clique") {
 <<<<<<< HEAD
+<<<<<<< HEAD
       modificadorC *= aprimoramento.mod;
       atualizarClique();
+=======
+      modificadorC += aprimoramento.mod;
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
       modificadorC += aprimoramento.mod;
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
@@ -505,7 +537,10 @@ function aprimorar(apriID) {
         itemAP.mult += aprimoramento.mod;
         calcSPS();
 <<<<<<< HEAD
+<<<<<<< HEAD
         atualizarClique();
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
       }
@@ -518,9 +553,12 @@ function aprimorar(apriID) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function updateAprimoramentos() {
   detalhesApri.style.display = "none";
 =======
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 // COMPRAS
 
 function comprar(itemID) {
@@ -565,6 +603,9 @@ detalhesApri.style.zIndex = "1000";
 document.body.appendChild(detalhesApri);
 
 function updateAprimoramentos() {
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
   loboaprimoramento.innerHTML = ""; // Limpa a lista
 
@@ -617,6 +658,7 @@ function updateAprimoramentos() {
   });
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 //LOJA
 const loboloja = document.getElementById("loboloja");
@@ -737,6 +779,8 @@ loja = loja.map((item) => ({
 function updateLoja() {
   detalhesLoja.style.display = "none";
 =======
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 // Atualiza a loja (botões)
 const detalhesLoja = document.createElement("div");
 detalhesLoja.className = "detalhes-loja";
@@ -752,6 +796,9 @@ detalhesLoja.style.zIndex = "1000";
 document.body.appendChild(detalhesLoja);
 
 function updateLoja() {
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
   loboloja.innerHTML = ""; // Limpa a loja
 
@@ -768,7 +815,12 @@ function updateLoja() {
     const botao = document.createElement("button");
     botao.className = "itemDaLoja";
 <<<<<<< HEAD
+<<<<<<< HEAD
     botao.innerHTML = ` <div> ${item.quantidade}  ${item.nome} ${item.preco} streams </div>`;
+=======
+    botao.innerHTML = `<div style= "width: max-content; font-size: 2.2rem; font-weight: 600; float: left; padding-right: 2%; padding-left: 1%;">${item.quantidade}</div> 
+        ${item.nome}<br/>${item.preco} streams`;
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 =======
     botao.innerHTML = `<div style= "width: max-content; font-size: 2.2rem; font-weight: 600; float: left; padding-right: 2%; padding-left: 1%;">${item.quantidade}</div> 
         ${item.nome}<br/>${item.preco} streams`;
@@ -785,6 +837,7 @@ function updateLoja() {
                 <div style="font-size: small">${item.total}</div>
                 <div style="width: 50%; margin-left: 50%; justify-content: flex-end; text-align: right; font-size: small; padding-top: 0.25rem; color: red; font-style: italic;">"${item.quote}"</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div style="border-top: 0.1rem solid black; font-size: x-small; padding-top: 0.5rem; margin-top: 0.5rem; text-align: center; font-weight: bold;">Clique para comprar.</div>`;
 
       // Define a posição fixa ao lado do botão
@@ -797,6 +850,8 @@ function updateLoja() {
 
     // Evento para esconder a div de detalhes
 =======
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
                 <div style="border-top: 0.1rem solid black; font-size: x-small; padding-top: 0.5rem; margin-top: 0.5rem; text-align: center; font-weight: bold;">Clique para comprar.</div>
             `;
 
@@ -810,6 +865,9 @@ function updateLoja() {
     botao.addEventListener("mouseleave", () => {
       detalhesLoja.style.display = "none";
     });
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 
     if (item.id != 1 && streams < item.inicio / 3 && item.quantidade == 0) {
@@ -820,16 +878,20 @@ function updateLoja() {
     botao.addEventListener("click", () => comprar(item.id));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     detalhesLoja.addEventListener("mouseleave", (event) => {
       detalhesLoja.style.display = "none";
     });
 
 =======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
     loboloja.appendChild(botao);
   });
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 //FUNÇÕES AUXILIARES
 function atualizarInterface() {
@@ -872,11 +934,15 @@ function som(url) {
 =======
 // Função para aumentar os streams por segundo
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
+// Função para aumentar os streams por segundo
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 function aumentarStreamsPorSegundo() {
   streams += sps / 10; // Aumenta os streams de acordo com os SPS acumulados
   atualizarInterface(); // Atualiza a interface para mostrar o novo valor de streams
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 function calcSPS() {
   sps = 0;
@@ -992,6 +1058,8 @@ function carregar() {
     if (arquivo.aprimoramentos) aprimoramentos = arquivo.aprimoramentos;
   }
 =======
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 // SKINS
 const skinLobos = "fotocas/lobos sem fundo.png";
 const skinAntiHeroi = "fotocas/anti heroi sem fundo.png";
@@ -1023,5 +1091,8 @@ function escolhaSkin(tema) {
   document.getElementById("imagem").src = skinLobos;
   document.getElementById("meio").style.backgroundImage =
     "url(fotocas/LOBOS.png)";
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 }

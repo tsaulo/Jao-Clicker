@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .aba{
     display: none;
     background-color: rgb(199, 199, 199);
@@ -127,6 +128,8 @@ h3{
     height: 40vh;
     animation-name: rodar;
 =======
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 .asAbas{
     display: flex;
     flex-wrap: wrap;
@@ -232,21 +235,30 @@ button{
     height: 25rem;
     cursor: pointer;
     animation-name: spin;
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
     animation-duration: 30000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     transform-origin: center;
 <<<<<<< HEAD
+<<<<<<< HEAD
     transition: width 0.3s ease, height 0.3s ease, margin-top 0.3s ease, margin-left 0.3s ease, margin-bottom 0.3s ease;
 }
 
 @keyframes rodar {
 =======
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
     transition: width 0.3s ease, height 0.3s ease, margin-top 0.3s ease, margin-left 0.3s ease, margin-bottom 0.3s ease;  /* Transição suave */
 }
 
 @keyframes spin {
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
     from {
         transform: rotate(0deg);
@@ -256,6 +268,7 @@ button{
     }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #imagem:hover{
     height: 42vh;
@@ -325,6 +338,8 @@ button{
         transform: translateY(-50px);
     }
 =======
+=======
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 #imagem:hover {
     width: 26.5rem;
     height: 26.5rem;
@@ -337,5 +352,8 @@ button{
     height: 24.5rem;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem ;
+<<<<<<< HEAD
+>>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
+=======
 >>>>>>> 35fda480b15f0db18d67460a78c77e9ae0c8366b
 }
